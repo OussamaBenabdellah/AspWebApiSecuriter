@@ -1,0 +1,6 @@
+@AspWebApiSecuriter_HostAddress = http://localhost:5136
+
+GET {{AspWebApiSecuriter_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
