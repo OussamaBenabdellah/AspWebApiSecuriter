@@ -14,13 +14,13 @@ builder.Services
     opt.UseSqlite(builder.Configuration
     .GetConnectionString("sqlite")));
 
+builder.Services.AddScoped<IPersonService, EfCorePersonneservice>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
 
-builder.Services.AddScoped<IPersonService, EfCorePersonneservice>();
 
 var app = builder.Build();
 
@@ -39,6 +39,7 @@ await app.Services
  
   
 app.MapPersonEndpoint();
+
 
  
 

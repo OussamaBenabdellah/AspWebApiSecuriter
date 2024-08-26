@@ -97,9 +97,9 @@ namespace AspWebApiSecuriter.Endpoint
                 }));
             }
             var dbResult = await service.Add(p);
-            //var path = linkGenerator.GetUriByName(httpContext, "GetById", new { id = dbResult.Id });
+            var path = linkGenerator.GetUriByName(httpContext, "GetById", new { id = dbResult.Id });
             //return Results.Created(path, dbResult);
-            return Results.Ok(p);
+            return Results.Ok(dbResult);
         }
     }
 }

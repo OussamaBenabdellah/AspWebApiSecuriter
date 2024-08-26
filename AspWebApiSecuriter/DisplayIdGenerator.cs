@@ -6,7 +6,7 @@ namespace AspWebApiSecuriter
     {
         public static string GenerateDisplayId(string prefix, int size = 12)
         {
-            var r = new Random();
+            
             var chars = new List<char>();
             for (int i = 65; i <= 90; i++)
             {
